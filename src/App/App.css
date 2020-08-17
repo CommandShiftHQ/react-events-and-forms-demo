@@ -1,3 +1,7 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
+
 .images {
   display: flex;
   flex-wrap: wrap;
@@ -14,8 +18,21 @@
   height: 100%;
 }
 
-.image-thumbnail__select {
+.image-thumbnail__save {
   position: absolute;
   top: 10px;
   right: 10px;
+  background-color: rgb(68, 171, 235);
+  color: white;
+  padding: 10px 12px;
+  border-radius: 20px;
+  line-height: 1;
+}
+
+.image-thumbnail__title {
+  background-color: white;
+  padding: 20px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
 }
