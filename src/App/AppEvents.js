@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ImageThumbnail from "../components/ImageThumbnail/ImageThumbnail";
 import images from "../data/images";
 import "./App.css";
@@ -10,7 +10,11 @@ const App = () => {
 
       <div className="images">
         {images.map((image, index) => (
-          <ImageThumbnail key={index} url={image.url} alt={image.description} />
+          <ImageThumbnail
+            key={index}
+            url={image.url}
+            description={image.description}
+          />
         ))}
       </div>
     </div>
