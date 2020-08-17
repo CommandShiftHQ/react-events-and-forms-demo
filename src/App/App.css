@@ -1,0 +1,21 @@
+.images {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.image-thumbnail {
+  height: 200px;
+  padding: 2px;
+  position: relative;
+}
+
+.image-thumbnail__image {
+  display: block;
+  height: 100%;
+}
+
+.image-thumbnail__select {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
