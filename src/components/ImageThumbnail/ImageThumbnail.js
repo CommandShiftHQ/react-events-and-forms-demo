@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 
 const ImageThumbnail = ({ url, description }) => {
+  const [hover, setHover] = useState(false);
+  const [save, setSave] = useState(false);
+
   return (
     <div className="image-thumbnail">
       <img src={url} className="image-thumbnail__image" alt={description} />
-      <button className="image-thumbnail__select">Save</button>
+      {save && <div className="image-thumbnail__save">Saved!</div>}
+      {hover && <div className="image-thumbnail__title">{description}</div>}
     </div>
   );
 };
