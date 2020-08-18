@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./style.css";
 
-const App = () => {
+const FormDemo = () => {
   const [fields, setFields] = useState({});
 
   const handleChange = (event) => {
@@ -28,7 +28,7 @@ const App = () => {
 
   console.log({ fields });
   return (
-    <div className="App">
+    <div className="FormDemo">
       <h1>App - Form</h1>
 
       <form className="form" onSubmit={(event) => handleSubmit(event)}>
@@ -41,7 +41,7 @@ const App = () => {
           />
         </div>
         <div className="form__field">
-          <label htmlFor="type">
+          <label htmlFor="iWantASnack">
             <input
               name="iWantASnack"
               onChange={(event) => handleCheckboxChange(event)}
@@ -66,4 +66,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default FormDemo;

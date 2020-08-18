@@ -1,18 +1,4 @@
-body {
-  font-family: "Courier New", Courier, monospace;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-.images {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .image-thumbnail {
-  height: 200px;
   padding: 2px;
   position: relative;
 }
@@ -39,19 +25,4 @@ body {
   width: 100%;
   position: absolute;
   bottom: 0;
-}
-
-.form {
-  width: 300px;
-}
-
-.form__field {
-  margin-bottom: 1em;
-}
-
-.form__field label,
-.form__field input[type="text"],
-.form__field select,
-.form__field textarea {
-  width: 100%;
 }

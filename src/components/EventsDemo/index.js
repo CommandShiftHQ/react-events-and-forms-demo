@@ -1,11 +1,11 @@
 import React from "react";
-import ImageThumbnail from "../components/ImageThumbnail/ImageThumbnail";
-import images from "../data/images";
-import "./App.css";
+import ImageThumbnail from "../ImageThumbnail";
+import images from "../../data/images";
+import "./style.css";
 
-const App = () => {
+const EventsDemo = () => {
   return (
-    <div className="App">
+    <div className="EventsDemo">
       <h1>App - Events</h1>
 
       <div className="images">
@@ -21,4 +21,4 @@ const App = () => {
   );
 };
 
-export default App;
+export default EventsDemo;
