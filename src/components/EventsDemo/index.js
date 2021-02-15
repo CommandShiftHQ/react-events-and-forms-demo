@@ -1,5 +1,5 @@
 import React from "react";
-import ImageThumbnail from "../ImageThumbnail";
+import ImageThumbnail from "./ImageThumbnail";
 import images from "../../data/images";
 import "./style.css";
 
