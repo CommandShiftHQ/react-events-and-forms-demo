@@ -3,13 +3,13 @@ import "./style.css";
 
 const ImageThumbnail = ({ url, description }) => {
   const [hover, setHover] = useState(false);
-  const [save, setSave] = useState(false);
+  const [selected, setSelected] = useState(false);
 
   const handleClick = (event) => {
     const target = event.target;
     const alt = target.getAttribute("alt");
     console.log(target, alt);
-    setSave(!save);
+    setSelected(!selected);
   };
 
   return (
@@ -20,7 +20,7 @@ const ImageThumbnail = ({ url, description }) => {
       onClick={(event) => handleClick(event)}
     >
       <img src={url} className="image-thumbnail__image" alt={description} />
-      {save && <div className="image-thumbnail__save">Saved!</div>}
+      {selected && <div className="image-thumbnail__save">Selected</div>}
       {hover && <div className="image-thumbnail__title">{description}</div>}
     </div>
   );
