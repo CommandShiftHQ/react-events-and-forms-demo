@@ -6,7 +6,7 @@ import "./style.css";
 const EventsDemo = () => {
   return (
     <div className="EventsDemo">
-      <h1>App - Events</h1>
+      <h1 className="demo-title">App - Events</h1>
 
       <div className="images">
         {images.map((image, index) => (

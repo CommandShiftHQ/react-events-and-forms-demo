@@ -3,6 +3,12 @@
   flex-wrap: wrap;
 }
 
-.images > div {
-  height: 200px;
+.image-thumbnail {
+  height: 240px;
+  margin-right: 20px;
+}
+
+.image-thumbnail__title {
+  font-size: 1.4rem;
+  background-color: #EFEFEFDD;
 }

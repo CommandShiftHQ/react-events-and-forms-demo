@@ -29,7 +29,7 @@ const FormDemo = () => {
   console.log({ fields });
   return (
     <div className="FormDemo">
-      <h1>App - Form</h1>
+      <h1 className="demo-title">App - Form</h1>
 
       <form className="form" onSubmit={(event) => handleSubmit(event)}>
         <div className="form__field">

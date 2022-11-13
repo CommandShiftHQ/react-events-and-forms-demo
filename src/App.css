@@ -1,7 +1,25 @@
 body {
-  font-family: "Courier New", Courier, monospace;
+  padding: 20px;
+  height: calc(100vh - 40px);
+  width: calc(100vw - 40px);
+  font-family: "Roboto", Courier, monospace;
+  color: #121212;
+  background-color: #EFEFEF;
 }
 
 * {
   box-sizing: border-box;
+}
+
+.change-demo-button {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.4rem;
+  background-color: lightskyblue;
+  transition: background-color 0.2s linear;
+}
+
+.change-demo-button:hover {
+  background-color: lightsalmon;
 }
