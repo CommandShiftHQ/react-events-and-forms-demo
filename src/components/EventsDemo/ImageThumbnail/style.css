@@ -1,6 +1,8 @@
 .image-thumbnail {
-  padding: 2px;
   position: relative;
+  height: 240px;
+  margin-right: 20px;
+  padding: 2px;
 }
 
 .image-thumbnail__image {
@@ -12,17 +14,18 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: rgb(68, 171, 235);
-  color: white;
+  background-color: lightskyblue;
   padding: 10px 12px;
-  border-radius: 20px;
+  border-radius: 10px;
   line-height: 1;
+  font-size: 1.2rem;
 }
 
 .image-thumbnail__title {
-  background-color: white;
-  padding: 20px;
-  width: 100%;
   position: absolute;
   bottom: 0;
+  width: 100%;
+  padding: 20px;
+  font-size: 1.4rem;
+  background-color: #EFEFEFE9;
 }
