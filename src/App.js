@@ -12,7 +12,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <button onClick={() => handleClick()}>Change to {demo} demo</button>
+      <button onClick={() => handleClick()}>
+        Change to {demo === "Events" ? "Form" : "Events"} demo
+      </button>
       {demo === "Events" ? <EventsDemo /> : <FormDemo />}
     </div>
   );
