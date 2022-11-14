@@ -8,14 +8,13 @@ const ImageThumbnail = ({ url, description }) => {
   const handleClick = (event) => {
     const target = event.target;
     const alt = target.getAttribute("alt");
-    console.log(target, alt);
     setSelected(!selected);
   };
 
   return (
     <div
       className="image-thumbnail"
-      onMouseOver={() => setHover(true)}
+      onMouseEnter={() => setHover(true)}
       onMouseOut={() => setHover(false)}
       onClick={(event) => handleClick(event)}
     >
