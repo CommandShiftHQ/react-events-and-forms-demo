@@ -2,65 +2,104 @@ import React, { useState } from "react";
 import "./style.css";
 
 const FormDemo = () => {
-  const [fields, setFields] = useState({});
 
-  const handleChange = (event) => {
-    console.log(event.target.name, event.target.value);
-    setFields({
-      ...fields,
-      [event.target.name]: event.target.value,
-    });
-  };
+  const [formData, setFormData] = useState({});
 
-  const handleCheckboxChange = (event) => {
-    console.log(event.target.name, event.target.checked);
-    setFields({
-      ...fields,
-      [event.target.name]: event.target.checked,
-    });
-  };
+  const handleFormInput = (target) => {
+    setFormData({
+      ...formData,
+      [target.name]: target.value
+    })
+  }
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    const formData = new FormData();
-    formData.append("username", fields.userName);
-  };
+  const handleCheckboxInput = (target) => {
+    setFormData({
+      ...formData,
+      [target.name]: target.checked
+    })
+  }
 
-  console.log({ fields });
+
   return (
     <div className="FormDemo">
       <h1 className="demo-title">App - Form</h1>
 
-      <form className="form" onSubmit={(event) => handleSubmit(event)}>
+      <form className="form">
         <div className="form__field">
-          <label>User name</label>
+          <label>What is your pet's name?</label>
           <input
-            name="username"
-            onChange={(event) => handleChange(event)}
+            name="petName"
+            onChange={(event) => {
+              handleFormInput(event.target);
+              console.log(formData)}
+              
+            }
             type="text"
           />
         </div>
+
         <div className="form__field">
-          <label htmlFor="iWantASnack">
-            <input
-              name="iWantASnack"
-              onChange={(event) => handleCheckboxChange(event)}
-              type="checkbox"
-            />
-            I want mac n cheese bites
-          </label>
+          <label>How old is your pet (years)?</label>
+          <input
+            name="age"
+            type="number"
+            min={1}
+            max={200}
+            onChange={(event) => {
+              handleFormInput(event.target);
+              console.log(formData)}
+            }
+          />
         </div>
+
         <div className="form__field">
-          <select name="day" onChange={(event) => handleChange(event)}>
-            <option value="Mon">Mon</option>
-            <option value="Tue">Tue</option>
-            <option value="Wed">Wed</option>
+          <label>What is your pet's species?</label>
+          <select name="species"
+            onChange={(event) => {
+              handleFormInput(event.target);
+              console.log(formData)}
+              
+            }
+            type="text"
+          >
+            <option value="Canary">Canary</option>
+            <option value="Cat">Cat</option>
+            <option value="Dog">Dog</option>
+            <option value="Gerbil">Gerbil</option>
+            <option value="Rabbit">Rabbit</option>
+            <option value="Snake">Snake</option>
           </select>
         </div>
+
         <div className="form__field">
-          <textarea name="details" onChange={(event) => handleChange(event)} />
+          <label>What is your pet's favourite activity?</label>
+          <textarea
+            name="favouriteActivity"
+            onChange={(event) => {
+              handleFormInput(event.target);
+              console.log(formData)}
+              
+            }
+            type="text"
+            />
         </div>
-        <button type="submit">Done!</button>
+
+        <div className="form__field">
+          <label htmlFor="isLoved">
+            <input
+              name="isLoved"
+              onChange={(event) => {
+                handleCheckboxInput(event.target);
+                console.log(formData)}
+                
+              }
+              type="checkbox"
+            />
+            Do you love your pet?
+          </label>
+        </div>
+
+        <button type="submit">Submit query</button>
       </form>
     </div>
   );
