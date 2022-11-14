@@ -1,9 +1,26 @@
+.form,
+.form input,
+.form textarea,
+.form select,
+.form button {
+  font-family: "Roboto", Courier, monospace;
+  font-size: 1.4rem;
+}
+
 .form {
   width: 300px;
+  font-size: 1.4rem;
 }
 
 .form__field {
   margin-bottom: 1em;
+  font-size: 1.4rem;
+}
+
+input,
+select,
+textarea {
+  margin-top: 2px;
 }
 
 .form__field label,
@@ -11,4 +28,10 @@
 .form__field select,
 .form__field textarea {
   width: 100%;
+}
+
+.form input[type='checkbox'] {
+  height: 20px;
+  width: 20px;
+  margin-right: 10px;
 }
